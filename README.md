@@ -6,9 +6,10 @@ npm install --save cool-vue-scrollbar
 
 ## 2. 使用
 ### main.js 全局
+```
 import coolscrollBar from 'cool-vue-scrollbar'
 Vue.use(coolscrollBar)
-
+```
 ### 组件中：
 ### example
 ```
