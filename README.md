@@ -1,16 +1,17 @@
 # scroll-bar
-
 # 用法
-1. 安装
+
+## 1. 安装
 npm install --save cool-vue-scrollbar
 
-2. 使用
-# main.js 全局
+## 2. 使用
+### main.js 全局
 import coolscrollBar from 'cool-vue-scrollbar'
 Vue.use(coolscrollBar)
 
-# 组件中：
-# example
+### 组件中：
+### example
+```
 <template>
   <div id="app">
     <scroll-bar class="wrapper" :options="options">
@@ -69,3 +70,4 @@ export default {
   border: 3px solid pink;
 }
 </style>
+```
