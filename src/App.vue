@@ -18,7 +18,6 @@ export default {
   },
   data(){
     return {
-      cc: ['ss'],
       options: {
         innerStyle:{
           backgroundColor: 'red',
@@ -28,7 +27,7 @@ export default {
         outStyle: {
         width: '5px',
         borderRadius: '5px',
-        backgroundColor: 'yellow'
+        backgroundColor: '#fff'
       },
       level :80
       },
@@ -36,9 +35,6 @@ export default {
     }
   },
   methods: {
-    add(){
-      this.cc.push('hh')
-    }
   }
 }
 </script>
@@ -60,6 +56,5 @@ export default {
   background-color: blueviolet;
   width:100px;
   border: 3px solid pink;
-  /* height:300px; */
 }
 </style>
