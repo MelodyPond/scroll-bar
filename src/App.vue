@@ -9,13 +9,12 @@
 </template>
 
 <script>
-import ScrollBar from './lib/ScrollBar.vue'
 
 export default {
   name: 'App',
-  components: {
-    ScrollBar
-  },
+  // components: {
+  //   ScrollBar
+  // },
   data(){
     return {
       options: {

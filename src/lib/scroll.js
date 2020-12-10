@@ -1,7 +1,6 @@
 import scrollBar from './ScrollBar.vue'
-
-export default{
-    components: {
-    scrollBar
-   }
-} 
+let scroll = {}
+scroll.install = function(Vue) {
+  Vue.component('scroll-bar',scrollBar)
+}
+export default scroll
