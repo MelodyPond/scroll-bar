@@ -38,5 +38,20 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "",
+  "main": "./src/lib/scroll.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MelodyPond/scroll-bar.git"
+  },
+  "keywords": [
+    "scroll-bar"
+  ],
+  "author": "vera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MelodyPond/scroll-bar/issues"
+  },
+  "homepage": "https://github.com/MelodyPond/scroll-bar#readme"
 }
