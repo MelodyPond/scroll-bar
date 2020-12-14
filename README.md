@@ -1,17 +1,17 @@
 # scroll-bar
-# 用法
 
-## 1. 安装
+## 自定义PC端滚动条，可以设置滚动条颜色，宽度等。
+## 1. 安装 Installation
 npm install --save cool-vue-scrollbar
 
-## 2. 使用
-### main.js 全局
+## 2. 使用 Usage
+### main.js文件 全局
 ```
 import coolscrollBar from 'cool-vue-scrollbar'
 Vue.use(coolscrollBar)
 ```
 ### 组件中：
-### example
+### Example
 ```
 <template>
   <div id="app">
@@ -30,7 +30,7 @@ export default {
   data(){
     return {
       options: {
-        innerStyle:{ // 这里是滑块的样式
+        innerStyle:{ // 这里是滑块的样式 
           backgroundColor: 'red',
           borderRadius: '5px',
           width: '5px'

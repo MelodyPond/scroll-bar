@@ -2,7 +2,7 @@
   <div id="app">
     <scroll-bar class="wrapper" :options="options">
       <div class="inner">
-       <div style="height:800px">test :D</div>
+       <div style="height:800px">Demo :D</div>
       </div>
      </scroll-bar>
   </div>
@@ -12,9 +12,6 @@
 
 export default {
   name: 'App',
-  // components: {
-  //   ScrollBar
-  // },
   data(){
     return {
       options: {
@@ -52,9 +49,8 @@ export default {
   border: 1px solid rgb(189, 186, 186)
 }
 .inner{
-  background-color: rgb(233, 211, 169);
+  background-color: rgb(252, 199, 208);
   width:100px;
-  border: 3px solid pink;
   padding: 0;
   margin:0;
 }
