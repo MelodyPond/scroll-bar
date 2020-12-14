@@ -1,6 +1,6 @@
 # scroll-bar
 
-## 自定义PC端滚动条，可以设置滚动条颜色，宽度等。
+## 自定义PC端滚动条，可以设置滚动条颜色，宽度，边框弧度半径等。
 ## 1. 安装 Installation
 npm install --save cool-vue-scrollbar
 

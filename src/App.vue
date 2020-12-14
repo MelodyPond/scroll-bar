@@ -2,7 +2,10 @@
   <div id="app">
     <scroll-bar class="wrapper" :options="options">
       <div class="inner">
-       <div style="height:800px">Demo :D</div>
+        <div style="height:800px">
+          <div>Demo :D</div>
+          <div>Hi~ there</div>
+        </div>
       </div>
      </scroll-bar>
   </div>
