@@ -136,9 +136,9 @@ export default {
 			let that = this
 			let t = that.$refs.scrollBarWrapper.offsetTop
 			document.onmousemove = function() {
-				that.wrapperStyle = {
-					boxShadow: '2px 2px 10px 0px rgba(54,55,55,0.06)',
-				}
+				// that.wrapperStyle = {
+				// 	boxShadow: '2px 2px 10px 0px rgba(54,55,55,0.06)',
+				// }
 				let h = that.wrapperHeight - that.$refs.scrollInner.offsetHeight
 				if (event.pageY - t > 0 || event.pageY - t == 0) {
 					if (event.pageY - t < h) {
@@ -154,7 +154,7 @@ export default {
 				that.$refs.content.style.top = that.top + 'px'
 			}
 			document.onmouseup = function() {
-				that.wrapperStyle = { boxShadow: 'none' }
+				// that.wrapperStyle = { boxShadow: 'none' }
 				document.onmousemove = null
 			}
 		},
