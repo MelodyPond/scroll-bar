@@ -94,7 +94,7 @@ export default {
 				this.$refs.scrollBarWrapper.offsetHeight
 			let disd2 =(scrollWrapperHeight -(scrollWrapperHeight * scrollWrapperHeight) /contentHeight) /disd
 			if (e.wheelDelta > 0) {
-				if (this.top < -this.level) {
+				if (this.top <= -this.level) {
 					this.top += this.level
 					this.top2 -= disd2 * this.level
 				} else {
@@ -104,25 +104,18 @@ export default {
 				this.$refs.content.style.top = this.top + 'px'
 				this.innerStyle.top = this.top2 + 'px'
 			}
-			if (e.wheelDelta < 0 && this.top + disd > this.level) {
+			if (e.wheelDelta < 0 && (this.top + disd > this.level)) {
 				this.top -= this.level
 				this.top2 += disd2 * this.level
 				this.$refs.content.style.top = this.top + 'px'
 				this.innerStyle.top = this.top2 + 'px'
 			}
-			if (
-				e.wheelDelta < 0 &&
-				this.top + disd < this.level &&
-				this.top + disd > 0
-			) {
-				this.top = -disd
+			if (e.wheelDelta < 0 &&this.top + disd <= this.level &&this.top + disd > 0) {
+				this.top = this.wrapperHeight - this.contentHeight
 				this.$refs.content.style.top = this.top + 'px'
-				this.top2 =
-					scrollWrapperHeight -
-					(scrollWrapperHeight * scrollWrapperHeight) / contentHeight
+				this.top2 = this.wrapperHeight - this.$refs.scrollInner.offsetHeight 
 				this.innerStyle.top = this.top2 + 'px'
       }
-      console.log(this.innerStyle)
 		},
 		toShowBar() {
 			this.contentHeight = this.$refs.content.offsetHeight
@@ -148,10 +141,14 @@ export default {
 				}
 				let h = that.wrapperHeight - that.$refs.scrollInner.offsetHeight
 				if (event.pageY - t > 0 || event.pageY - t == 0) {
-					if (event.pageY - t < h || event.pageY - t == h) {
+					if (event.pageY - t < h) {
 						that.top2 = event.pageY - t
 						that.top = -that.top2 * rate
 					}
+				} 
+				if(event.pageY - t >= h){
+					that.top2 = h
+					that.top = that.wrapperHeight-that.contentHeight  
 				}
 				that.innerStyle.top = that.top2 + 'px'
 				that.$refs.content.style.top = that.top + 'px'
@@ -165,9 +162,16 @@ export default {
 }
 </script>
 <style scoped>
+@media (min-width: 768px) {
+	.scroll-wrapper {overflow: hidden;}
+}
+@media (max-width: 768px) {
+  .scroll-wrapper {overflow: auto;}
+  .scroll-track {display: none;}
+}  
 .scroll-wrapper {
 	position: relative;
-	overflow: hidden;
+	/* overflow: hidden; */
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;

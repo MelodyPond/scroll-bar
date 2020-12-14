@@ -2,7 +2,7 @@
   <div id="app">
     <scroll-bar class="wrapper" :options="options">
       <div class="inner">
-       <div style="height:800px"></div>
+       <div style="height:800px">test :D</div>
       </div>
      </scroll-bar>
   </div>
@@ -19,7 +19,7 @@ export default {
     return {
       options: {
         innerStyle:{
-          backgroundColor: 'red',
+          backgroundColor: 'rgb(129,216,207)',
           borderRadius: '5px',
           width: '5px'
         },
@@ -48,12 +48,14 @@ export default {
   margin-top: 60px;
 }
 .wrapper{
-  width:200px;height:200px;border:1px solid rgb(94, 126, 94);margin: 0 auto;
- 
+  width:200px;height:200px;margin: 0 auto;
+  border: 1px solid rgb(189, 186, 186)
 }
 .inner{
-  background-color: blueviolet;
+  background-color: rgb(233, 211, 169);
   width:100px;
   border: 3px solid pink;
+  padding: 0;
+  margin:0;
 }
 </style>
